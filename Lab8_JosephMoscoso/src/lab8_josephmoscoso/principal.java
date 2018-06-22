@@ -30,7 +30,14 @@ public class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
+        jd_area = new javax.swing.JDialog();
+        jLabel12 = new javax.swing.JLabel();
+        cb_nuevoa = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jd_area2 = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        cb_nuevoa1 = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jl_e = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
@@ -58,7 +65,87 @@ public class principal extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         cb_puesto = new javax.swing.JComboBox<>();
 
-        jToggleButton1.setText("jToggleButton1");
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setText("Escoja la nueva area");
+
+        cb_nuevoa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gerentes de Área", "Empleados de primera linea", "Gerente general", " " }));
+
+        jButton1.setText("Aceptar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_areaLayout = new javax.swing.GroupLayout(jd_area.getContentPane());
+        jd_area.getContentPane().setLayout(jd_areaLayout);
+        jd_areaLayout.setHorizontalGroup(
+            jd_areaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_areaLayout.createSequentialGroup()
+                .addGroup(jd_areaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_areaLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addGroup(jd_areaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(cb_nuevoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12)))
+                    .addGroup(jd_areaLayout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addComponent(jButton1)))
+                .addContainerGap(112, Short.MAX_VALUE))
+        );
+        jd_areaLayout.setVerticalGroup(
+            jd_areaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_areaLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cb_nuevoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setText("Escoja el puesto");
+
+        cb_nuevoa1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gerentes de Área", "Empleados de primera linea", "Gerente general", " " }));
+
+        jButton2.setText("Aceptar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_area2Layout = new javax.swing.GroupLayout(jd_area2.getContentPane());
+        jd_area2.getContentPane().setLayout(jd_area2Layout);
+        jd_area2Layout.setHorizontalGroup(
+            jd_area2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_area2Layout.createSequentialGroup()
+                .addGroup(jd_area2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_area2Layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addGroup(jd_area2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cb_nuevoa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jd_area2Layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(jLabel13))))
+                    .addGroup(jd_area2Layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addComponent(jButton2)))
+                .addContainerGap(111, Short.MAX_VALUE))
+        );
+        jd_area2Layout.setVerticalGroup(
+            jd_area2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_area2Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cb_nuevoa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,10 +180,25 @@ public class principal extends javax.swing.JFrame {
         jLabel8.setText("Puesto");
 
         jb_cambioarea.setText("Cambio de area");
+        jb_cambioarea.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_cambioareaMouseClicked(evt);
+            }
+        });
 
         jb_despedir.setText("Despedir");
+        jb_despedir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_despedirMouseClicked(evt);
+            }
+        });
 
         jb_ascenso.setText("Ascenso");
+        jb_ascenso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_ascensoMouseClicked(evt);
+            }
+        });
 
         jb_punto.setText("Punto a punto");
 
@@ -266,15 +368,90 @@ public class principal extends javax.swing.JFrame {
     private void jb_agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarMouseClicked
         // TODO add your handling code here:
         try {
-            DefaultListModel mm = (DefaultListModel) jl_e.getModel();
+            DefaultListModel m = (DefaultListModel) jl_e.getModel();
             empleado x = new empleado(tf_nombre.getText(), tf_id.getText(), pf_pass.getText(), (String) cb_jefe.getSelectedItem(), Integer.parseInt(tf_salario.getText()), (String) cb_puesto.getSelectedItem());
             cb_jefe.addItem(x.toString());
-            mm.addElement(x.toString()); 
+            m.addElement(x.toString());
+            tf_nombre.setText("");
+            tf_id.setText("");
+            tf_salario.setText("");
+            pf_pass.setText("");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Dato incorrecto, ingrese otra vez por favor");
         }
-        
+
     }//GEN-LAST:event_jb_agregarMouseClicked
+
+    private void jb_cambioareaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_cambioareaMouseClicked
+        // TODO add your handling code here:
+        try {
+            if (jl_e.getSelectedIndex() >= 0) {
+                jd_area.setModal(true);
+                jd_area.pack();
+                jd_area.setLocationRelativeTo(this);
+                jd_area.setVisible(true);
+            }
+        } catch (Exception e) {
+        }
+        
+    }//GEN-LAST:event_jb_cambioareaMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        try {
+            if (jl_e.getSelectedIndex() >= 0) {
+                DefaultListModel m = (DefaultListModel) jl_e.getModel();
+                empleado x;
+                x = (empleado) m.getElementAt(jl_e.getSelectedIndex());
+                x.setPuesto((String) cb_nuevoa.getSelectedItem());
+                m.setElementAt(x, jl_e.getSelectedIndex());
+                JOptionPane.showMessageDialog(this, "Datos modificados con exito");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "error, no se pudo editar");
+        }
+        
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jb_despedirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_despedirMouseClicked
+        // TODO add your handling code here:
+        try {
+            DefaultListModel m = (DefaultListModel) jl_e.getModel();
+            if (jl_e.getSelectedIndex() >= 0) {
+                m.removeElementAt(jl_e.getSelectedIndex());
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jb_despedirMouseClicked
+
+    private void jb_ascensoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ascensoMouseClicked
+        // TODO add your handling code here:
+        try {
+            if (jl_e.getSelectedIndex() >= 0) {
+                jd_area2.setModal(true);
+                jd_area2.pack();
+                jd_area2.setLocationRelativeTo(this);
+                jd_area2.setVisible(true);
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jb_ascensoMouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        try {
+            if (jl_e.getSelectedIndex() >= 0) {
+                DefaultListModel m = (DefaultListModel) jl_e.getModel();
+                empleado x;
+                x = (empleado) m.getElementAt(jl_e.getSelectedIndex());
+                x.setPuesto((String) cb_nuevoa.getSelectedItem());
+                m.setElementAt(x, jl_e.getSelectedIndex());
+                JOptionPane.showMessageDialog(this, "Datos modificados con exito");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "error, no se pudo editar");
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -313,10 +490,16 @@ public class principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cb_jefe;
+    private javax.swing.JComboBox<String> cb_nuevoa;
+    private javax.swing.JComboBox<String> cb_nuevoa1;
     private javax.swing.JComboBox<String> cb_puesto;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -326,7 +509,6 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JButton jb_agregar;
     private javax.swing.JButton jb_ascenso;
     private javax.swing.JButton jb_broad;
@@ -334,6 +516,8 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton jb_despedir;
     private javax.swing.JButton jb_help;
     private javax.swing.JButton jb_punto;
+    private javax.swing.JDialog jd_area;
+    private javax.swing.JDialog jd_area2;
     private javax.swing.JList<String> jl_e;
     private javax.swing.JPasswordField pf_pass;
     private javax.swing.JTextField tf_id;
