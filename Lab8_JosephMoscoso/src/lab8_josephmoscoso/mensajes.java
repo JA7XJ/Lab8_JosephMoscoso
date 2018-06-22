@@ -56,10 +56,10 @@ public class mensajes {
     public void setMsj(String msj) {
         this.msj = msj;
     }
-    
+
     @Override
     public String toString() {
-        return "mensajes{" + "Destino=" + Destino + ", Fuente=" + Fuente + ", cif=" + cif + '}';
+        return "mensajes{" + "Destino=" + Destino + ", Fuente=" + Fuente + ", cif=" + cif + ", msj=" + msj + '}';
     }
     
 }

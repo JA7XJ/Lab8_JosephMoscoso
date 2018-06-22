@@ -100,7 +100,7 @@ public class empleado {
 
     @Override
     public String toString() {
-        return "nombre=" + nombre + " jefe=" + jefe + " puesto=" + puesto;
+        return "nombre=" + nombre + ", jefe=" + jefe + ", puesto=" + puesto;
     }
 
 }
