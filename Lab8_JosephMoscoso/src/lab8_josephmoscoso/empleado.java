@@ -20,6 +20,7 @@ public class empleado {
     private int salario;
     private String puesto;
     ArrayList<empleado> a = new ArrayList();
+    ArrayList<mensajes> m = new ArrayList();
 
     public empleado() {
     }
@@ -87,6 +88,14 @@ public class empleado {
 
     public void setA(ArrayList<empleado> a) {
         this.a = a;
+    }
+
+    public ArrayList<mensajes> getM() {
+        return m;
+    }
+
+    public void setM(ArrayList<mensajes> m) {
+        this.m = m;
     }
 
     @Override
