@@ -203,6 +203,11 @@ public class principal extends javax.swing.JFrame {
         jb_punto.setText("Punto a punto");
 
         jb_broad.setText("Broadcast");
+        jb_broad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_broadMouseClicked(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("Mensajes");
@@ -371,7 +376,7 @@ public class principal extends javax.swing.JFrame {
             DefaultListModel m = (DefaultListModel) jl_e.getModel();
             empleado x = new empleado(tf_nombre.getText(), tf_id.getText(), pf_pass.getText(), (String) cb_jefe.getSelectedItem(), Integer.parseInt(tf_salario.getText()), (String) cb_puesto.getSelectedItem());
             cb_jefe.addItem(x.toString());
-            m.addElement(x.toString());
+            m.addElement(x);
             tf_nombre.setText("");
             tf_id.setText("");
             tf_salario.setText("");
@@ -393,7 +398,7 @@ public class principal extends javax.swing.JFrame {
             }
         } catch (Exception e) {
         }
-        
+
     }//GEN-LAST:event_jb_cambioareaMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -402,15 +407,16 @@ public class principal extends javax.swing.JFrame {
             if (jl_e.getSelectedIndex() >= 0) {
                 DefaultListModel m = (DefaultListModel) jl_e.getModel();
                 empleado x;
-                x = (empleado) m.getElementAt(jl_e.getSelectedIndex());
+                x = (empleado) m.get(jl_e.getSelectedIndex());
                 x.setPuesto((String) cb_nuevoa.getSelectedItem());
                 m.setElementAt(x, jl_e.getSelectedIndex());
                 JOptionPane.showMessageDialog(this, "Datos modificados con exito");
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "error, no se pudo editar");
+           // e.printStackTrace();
         }
-        
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jb_despedirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_despedirMouseClicked
@@ -443,7 +449,7 @@ public class principal extends javax.swing.JFrame {
             if (jl_e.getSelectedIndex() >= 0) {
                 DefaultListModel m = (DefaultListModel) jl_e.getModel();
                 empleado x;
-                x = (empleado) m.getElementAt(jl_e.getSelectedIndex());
+                x = (empleado) m.get(jl_e.getSelectedIndex());
                 x.setPuesto((String) cb_nuevoa.getSelectedItem());
                 m.setElementAt(x, jl_e.getSelectedIndex());
                 JOptionPane.showMessageDialog(this, "Datos modificados con exito");
@@ -452,6 +458,11 @@ public class principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "error, no se pudo editar");
         }
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jb_broadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_broadMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jb_broadMouseClicked
 
     /**
      * @param args the command line arguments
