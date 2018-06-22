@@ -13,14 +13,16 @@ public class mensajes {
     private String Destino;
     private String Fuente;
     private String cif;
+    private String msj;
 
     public mensajes() {
     }
 
-    public mensajes(String Destino, String Fuente, String cif) {
+    public mensajes(String Destino, String Fuente, String cif, String msj) {
         this.Destino = Destino;
         this.Fuente = Fuente;
         this.cif = cif;
+        this.msj = msj;
     }
 
     public String getDestino() {
@@ -47,6 +49,14 @@ public class mensajes {
         this.cif = cif;
     }
 
+    public String getMsj() {
+        return msj;
+    }
+
+    public void setMsj(String msj) {
+        this.msj = msj;
+    }
+    
     @Override
     public String toString() {
         return "mensajes{" + "Destino=" + Destino + ", Fuente=" + Fuente + ", cif=" + cif + '}';

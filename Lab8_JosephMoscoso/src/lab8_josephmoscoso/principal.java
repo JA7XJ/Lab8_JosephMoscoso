@@ -38,6 +38,11 @@ public class principal extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         cb_nuevoa1 = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
+        jd_mensajes = new javax.swing.JDialog();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jl_e = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
@@ -145,6 +150,47 @@ public class principal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel14.setText("Escriba su mensaje");
+
+        jScrollPane2.setViewportView(jTextPane1);
+
+        jButton3.setText("Enviar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_mensajesLayout = new javax.swing.GroupLayout(jd_mensajes.getContentPane());
+        jd_mensajes.getContentPane().setLayout(jd_mensajesLayout);
+        jd_mensajesLayout.setHorizontalGroup(
+            jd_mensajesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_mensajesLayout.createSequentialGroup()
+                .addGroup(jd_mensajesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_mensajesLayout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jLabel14))
+                    .addGroup(jd_mensajesLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_mensajesLayout.createSequentialGroup()
+                        .addGap(223, 223, 223)
+                        .addComponent(jButton3)))
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+        jd_mensajesLayout.setVerticalGroup(
+            jd_mensajesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_mensajesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jButton3)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -425,6 +471,7 @@ public class principal extends javax.swing.JFrame {
             DefaultListModel m = (DefaultListModel) jl_e.getModel();
             if (jl_e.getSelectedIndex() >= 0) {
                 m.removeElementAt(jl_e.getSelectedIndex());
+                JOptionPane.showMessageDialog(this, "Persona despedida con exito");
             }
         } catch (Exception e) {
         }
@@ -461,8 +508,27 @@ public class principal extends javax.swing.JFrame {
 
     private void jb_broadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_broadMouseClicked
         // TODO add your handling code here:
-
+        try {
+            if (jl_e.getSelectedIndex() >= 0) {
+                jd_mensajes.setModal(true);
+                jd_mensajes.pack();
+                jd_mensajes.setLocationRelativeTo(this);
+                jd_mensajes.setVisible(true);
+            }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jb_broadMouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        try {
+            if (jl_e.getSelectedIndex() >= 0) {
+                
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error, no se pudieron mandar mensajes");
+        }
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -506,11 +572,13 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_puesto;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -520,6 +588,8 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JButton jb_agregar;
     private javax.swing.JButton jb_ascenso;
     private javax.swing.JButton jb_broad;
@@ -529,6 +599,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton jb_punto;
     private javax.swing.JDialog jd_area;
     private javax.swing.JDialog jd_area2;
+    private javax.swing.JDialog jd_mensajes;
     private javax.swing.JList<String> jl_e;
     private javax.swing.JPasswordField pf_pass;
     private javax.swing.JTextField tf_id;
