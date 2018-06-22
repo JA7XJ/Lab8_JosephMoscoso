@@ -549,22 +549,7 @@ public class principal extends javax.swing.JFrame {
                 DefaultListModel m = (DefaultListModel) jl_e.getModel();
                 empleado x;
                 x = (empleado) m.get(jl_e.getSelectedIndex());
-                b.add(new mensajes(x.getNombre(), x.getJefe(), "no", tp_mensaje.getText()));
-                File archivo = null;
-                FileWriter fw = null;
-                BufferedWriter bw = null;
-                try {
-                    archivo = new File("./Lab8_JosephMoscoso/mensajes.txt");
-                    fw = new FileWriter(archivo, true);
-                    bw = new BufferedWriter(fw);
-                    // bw.newLine();
-                    bw.write(b.get(b.size()-1).getMsj() + ";");
-                    //bw.newLine();
-                    bw.flush();
-                } catch (Exception e) {
-                }
-                bw.close();
-                fw.close();
+                archivo(x);
             }
             JOptionPane.showMessageDialog(this, "Mensaje mandado con exito");
         } catch (Exception e) {
@@ -572,10 +557,27 @@ public class principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error, no se pudieron mandar mensajes");
         }
     }//GEN-LAST:event_jButton3MouseClicked
-
+    public void archivo(empleado x) throws IOException {
+        b.add(new mensajes(x.getNombre(), x.getJefe(), "no", tp_mensaje.getText()));
+        File archivo = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        try {
+            archivo = new File("./Lab8_JosephMoscoso/mensajes.txt");
+            fw = new FileWriter(archivo, true);
+            bw = new BufferedWriter(fw);
+            // bw.newLine();
+            bw.write(b.get(b.size()-1).toString() + ";");
+            bw.newLine();
+            bw.flush();
+        } catch (Exception e) {
+        }
+        bw.close();
+        fw.close();
+    }
     private void jb_verbMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_verbMouseClicked
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jb_verbMouseClicked
 
     /**
