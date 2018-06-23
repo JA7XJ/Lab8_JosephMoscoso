@@ -563,7 +563,7 @@ public class principal extends javax.swing.JFrame {
         FileWriter fw = null;
         BufferedWriter bw = null;
         try {
-            archivo = new File("./Lab8_JosephMoscoso/mensajes.txt");
+            archivo = new File("./Lab8_JosephMoscoso2/mensajes.txt");
             fw = new FileWriter(archivo, true);
             bw = new BufferedWriter(fw);
             // bw.newLine();
